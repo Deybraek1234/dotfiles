@@ -1,8 +1,8 @@
 
-[mgr]
+[manager]
 prepend_keymap = [
 	{ on = "<Esc>", run = "quit", desc = "Quit the application" },
-	{ on = "<C-y>", run = "toggle_hidden" },
+	{ on = "<C-h>", run = "toggle_hidden" },
 ]
 
 [input]

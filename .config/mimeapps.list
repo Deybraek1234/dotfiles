@@ -1,0 +1,7 @@
+[Default Applications]
+application/vnd.rar=userapp-unrar -x-MZ8GA3.desktop
+inode/directory=yazi.desktop
+
+[Added Associations]
+application/vnd.rar=userapp-unrar -x-MZ8GA3.desktop;
+inode/directory=yazi.desktop;
