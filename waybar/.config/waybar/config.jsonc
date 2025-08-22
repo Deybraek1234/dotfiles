@@ -1,0 +1,222 @@
+{	"reload_style_on_change":true,
+	"layer": "top",
+	"position": "top",
+	"height": 30,
+	"modules-left": [
+		"idle_inhibitor",
+		"battery",
+		"network",
+		"bluetooth",
+		"group/hardware",
+		"network#net2",
+	],
+
+	"modules-center": [
+		"hyprland/workspaces"
+	],
+
+	"modules-right": [
+		"wlr/taskbar",
+		"custom/space",
+		"clock",
+		"custom/space",
+		"pulseaudio#sink",
+		"pulseaudio/slider",
+		"custom/space",
+		"group/op",
+		"custom/swaync"
+	],
+
+	"hyprland/workspaces": {
+		"active-only": false,
+		"all-outputs": true,
+		"on-scroll-up": "hyprctl dispatch workspace -1",
+		"on-scroll-down": "hyprctl dispatch workspace +1",
+		"format": "{name}",
+		"on-click": "activate",
+		"height": 0
+	},
+
+      "wlr/taskbar": {
+      "icon-size": 23,
+      "on-click": "activate",
+      "format": "{icon}"
+      },	
+
+	"clock": {
+	"format": "<big>{:%H:%M}</big>",
+        "interval": 60
+        }, 
+
+	"network": {
+		"interval": 2.5,
+		"format": "{icon}{essid}",
+		"format-wifi": " {icon}   {essid}",
+		"format-ethernet": "{ifname}",
+		"format-disconnected": "󰤫  Disconnected",
+		"format-disabled": "󰤭 Disabled",
+		"max-length": 50,
+		"on-click": "kitty --class nmwui nmtui",
+		"format-icons": [
+			"󰤯 ",
+			"󰤟 ",
+			"󰤢 ",
+			"󰤥",
+			"󰤨"
+		]
+	},
+
+
+	"custom/poweroff": {
+		"format": "",
+    		"tooltip": "Power Off",
+		"on-click": "systemctl poweroff",
+  		"interval": 3600
+},
+
+
+	"custom/reboot": {
+		"format": "",
+    		"tooltip": "reboot",
+		"on-click": "reboot",
+  		"interval": 3600
+},
+
+	"custom/sleep": {
+		"format": "󰤄",
+    		"tooltip": "sleep",
+		"on-click": "systemctl suspend-then-hibernate",
+  		"interval": 3600
+},
+
+	"custom/swaync": {
+		"format": "",
+    		"tooltip": "notification center",
+		"on-click": "~/scripts/mako_history.sh",
+  		"interval": 3600
+},
+	"network#net2": {
+		"interval": 2,
+		"format": "<span></span>{bandwidthUpBytes:>}  <span></span>{bandwidthDownBytes:>}"
+	},
+
+	"custom/void": {
+		"format": "<span>  󰇙 </span>"
+	},
+
+	"custom/space": {
+		"format": "<span>  </span>"
+	},
+	
+	"pulseaudio/slider": {
+		"min": 0,
+		"max": 100,
+		"orientation": "horizontal"
+	},
+
+	"pulseaudio#sink": {
+		"format": "{icon}",
+		"format-bluetooth": "{icon} ",
+		"format-muted": "󰝟 ",
+		"format-icons": {
+			"headphone": "󰋋",
+			"hands-free": "󱡏",
+			"headset": "󰋎",
+			"phone": "",
+			"portable": "",
+			"car": "",
+			"default": [
+				"󰖀",
+				"󰕾"
+			]
+		},
+		"ignored-sinks": [
+			"Easy Effects Sink"
+		],
+		"smooth-scrolling-threshold": "4",
+		"scroll-step": "5",
+		"on-click-middle": "pactl set-default-sink $(pactl list short sinks | awk '{print $2}' | sed '/easyeffects_sink/d' | sed \"/$(pactl get-default-sink)/d\" | tofi --prompt-text \" \" --height 118 --width 480 --anchor bottom-right --margin-right 80 --margin-bottom 50 --auto-accept-single true )",
+		"on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+		"on-click": "pkill pavucontrol; pavucontrol",
+		"on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+ -l 2.0",
+		"on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%- -l 2.0"
+	},
+
+	"group/hardware":{
+		"orientation":"inherit",
+		"drawer":{
+			"transition-duration":600,
+			"transition-right-to-left": true,
+		},
+		"modules":[
+			"custom/expand",
+			"cpu",
+			"memory",
+			"disk",
+			"temperature"
+		]
+	},
+	"custom/expand":{
+		"format":"<span> <big> 󰇙 </big> </span>",
+		"tooltip":false,
+	},
+	"cpu":{
+		"interval":5,
+		"format": "   {usage}% |",
+		"tooltip-format":"{load}%"
+	},
+
+	"memory":{
+		"format":"󰕳  {percentage}% |",
+		"tooltip-format":"{percentage}% Used:{used} Available: {avail}"
+	},
+
+	"disk":{
+		"format":"  {free} |",
+		"tooltip-format":"Used:{percentage_used}% Free:{percentage_free}%"
+	},
+
+	"temperature":{
+		"format":"  {temperatureC}°C |"
+	},
+
+	"bluetooth":{
+		"format":"{icon}󰂯",
+		"format-disabled":"{icon}󰂲",
+		"format-connected":"{icon}󰂱 {device_alias}",
+		"tooltip-format-connected":"{device_alias} {device_battery_percentage}%",
+		"tooltip-format-off":"Bluetooth Disabled",
+		"tooltip-format-on":"Bluetooth Enabled",
+		"on-click": "rfkill toggle bluetooth",
+  		"on-click-right": "blueman-manager"
+	},
+	"battery":{
+		"interval":5,
+		"states":{
+			"good": 95,
+			"warning": 25,
+			"critical": 15,
+		},
+		"format":"{icon}   {capacity}%",
+		"format-charging":"󰂄 {capacity}%",
+	},
+	"group/op":{
+		"orientation":"inherit",
+		"class":"group-op",
+		"modules":[
+			"custom/lock",
+			"custom/sleep",
+			"custom/reboot",
+			"custom/poweroff"
+		]
+	},
+
+	"idle_inhibitor":{
+		"format":"<big>  </big>",
+		"tooltip":false,
+		"on-click-right":"rofi -show powermenu -modi powermenu:~/.local/bin/rofi-powermenu -config ~/.config/rofi/presets/powermenu.rasi",
+		"timeout":60.0,
+		"tooltip":false
+	},
+}
+
