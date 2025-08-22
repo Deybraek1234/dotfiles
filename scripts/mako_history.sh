@@ -23,7 +23,6 @@ elif [ -n "$active_notifs" ]; then
     for i in {1..3}; do
 	makoctl dismiss
         done
-    fi
 else
     # Case 3: No notifications in history or active.
     notify-send "Mako Notifications" "No notifications to restore or dismiss."
