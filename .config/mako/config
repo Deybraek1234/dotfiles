@@ -2,9 +2,9 @@
 
 # Global colors
 # Colors can be specified as #RRGGBB or #RRGGBBAA
-background-color=#070711
-text-color=#c1c1c3
-border-color=#1D6C95
+background-color=#161e33
+text-color=#c4c6cc
+border-color=#55718B
 default-timeout=3000
 history=1
 max-history=4

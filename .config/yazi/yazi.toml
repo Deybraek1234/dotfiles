@@ -25,14 +25,16 @@ image_quality = 75
 
 [opener]
 wp = [{ run = '/home/franci/scripts/wallpaper_changer.sh "$@"', desc = "Change wallpaper", for = "linux"}]
-edit = [{run = 'nvim "$@"', desc = "Nvim", block = true, for = "unix"}]
+edit = [{run = 'nano "$@"', desc = "Nano", block = true, for = "unix"}]
 extract = [{run = 'unzip $@"', desc = "Extract here", for = "unix"}]
 play = [{run = 'mpv --force-window "$@"', orphan = true, for = "unix"}]
+code = [{run = 'code "$@"', block = false, desc = "Open VS code", for ="unix"}]
 
 [open]
 rules = [
     { mime = "image/*", use = ["wp", "open", "reveal"] },
     { name = "*/", use = ["edit", "open", "reveal"] },
+    { name = "*.tex", use = ["code", "reveal"]},
     { mime = "text/*", use = ["edit", "reveal"] },
     { mime = "{audio,video}/*", use = ["play", "reveal"] },
     { mime = "application/{zip,rar,7z*}", use = ["extract", "reveal"]},
@@ -40,8 +42,7 @@ rules = [
     { mime = "*/javascript", use = ["edit", "reveal"] },
     { mime = "application/{json,ndjson}", use = ["edit", "reveal"] },
     { mime = "*/javascript", use = ["edit", "reveal"] },
-    { name = "*", use = ["open", "reveal"] },
-
+    { name = "*", use = ["edit", "open", "reveal"] },
 ]
 
 

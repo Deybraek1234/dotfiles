@@ -6,7 +6,9 @@ if [[ $(tty) == "/dev/tty1" ]]; then
        Hyprland
 fi 
 
-export PATH="/usr/local/texlive/2025/bin/x86_64-linux:$PATH"
+export PATH="~/scripts:$PATH"
+#export EDITOR=nano
+#export VISUAL=nano
 
 eval "$(starship init bash)"
 
@@ -16,6 +18,9 @@ alias confwaybar="nano ~/.config/waybar/waybar.conf"
 alias cp="cp -i"
 alias df="df -h"
 alias bye="exit"
+alias fastfetch="misfortune | cowsay > /tmp/cowsay.txt && fastfetch --logo /tmp/cowsay.txt"
+alias chs="navi"
+alias btrfs-assistant="wsudo btrfs-assistant"
 
 shopt -s expand_aliases
 shopt -s histappend
@@ -25,5 +30,3 @@ shopt -s autocd
 
 HISTFILESIZE=1000
 HISTFILESIZE=2000
-
-

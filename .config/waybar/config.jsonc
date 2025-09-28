@@ -51,7 +51,7 @@
 	"network": {
 		"interval": 2.5,
 		"format": "{icon}{essid}",
-		"format-wifi": " {icon}   {essid}",
+		"format-wifi": " {icon}  {essid} ",
 		"format-ethernet": "{ifname}",
 		"format-disconnected": "󰤫  Disconnected",
 		"format-disabled": "󰤭 Disabled",
