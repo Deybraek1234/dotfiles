@@ -7,8 +7,11 @@ if [[ $(tty) == "/dev/tty1" ]]; then
 fi 
 
 export PATH="~/scripts:$PATH"
-#export EDITOR=nano
-#export VISUAL=nano
+export EDITOR=nano
+export VISUAL=nano
+export ANDROID_HOME=/opt/android-sdk
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 eval "$(starship init bash)"
 
@@ -21,6 +24,9 @@ alias bye="exit"
 alias fastfetch="misfortune | cowsay > /tmp/cowsay.txt && fastfetch --logo /tmp/cowsay.txt"
 alias chs="navi"
 alias btrfs-assistant="wsudo btrfs-assistant"
+alias rcode="cd ~/Code/Lab\ 2/Root && root fit_grafico.cxx+"
+alias reboot="systemctl reboot"
+alias backup="~/scripts/backup_bashrc.sh"
 
 shopt -s expand_aliases
 shopt -s histappend

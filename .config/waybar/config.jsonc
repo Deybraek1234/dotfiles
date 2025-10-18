@@ -85,7 +85,7 @@
 	"custom/sleep": {
 		"format": "󰤄",
     		"tooltip": "sleep",
-		"on-click": "systemctl suspend-then-hibernate",
+		"on-click": "systemctl suspend",
   		"interval": 3600
 },
 
