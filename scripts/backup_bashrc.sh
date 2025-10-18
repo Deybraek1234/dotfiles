@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Array of directories to backup
-DIRECTORIES=("$HOME/stow/dotfiles" "$HOME/stow/laboratori" "$HOME/stow/Obsidian")
+DIRECTORIES=("$HOME/stow/dotfiles" "$HOME/stow/laboratori/Code" "$HOME/stow/Obsidian")
 COMMIT_MESSAGE="Automated backup: $(date '+%Y-%m-%d %H:%M:%S')"
 BRANCH="master" # Change to 'main' if needed
 
@@ -10,9 +10,9 @@ for dir in "${DIRECTORIES[@]}"; do
         echo "--- Backing up $dir ---"
         (
             cd "$dir" || exit
-            git add .
-            git commit -m "$COMMIT_MESSAGE"
-            git push origin $BRANCH
+            git add . &&
+            git commit -m "$COMMIT_MESSAGE" &&
+            git push origin
         )
     else
         echo "Directory $dir not found, skipping."
