@@ -25,7 +25,7 @@ alias fastfetch="misfortune | cowsay > /tmp/cowsay.txt && fastfetch --logo /tmp/
 alias chs="navi"
 alias btrfs-assistant="wsudo btrfs-assistant"
 alias rcode="cd ~/Code/Lab\ 2/Root && root fit_grafico.cxx+"
-alias reboot="systemctl reboot"
+alias reboot="backup && systemctl reboot"
 alias backup="~/scripts/backup_bashrc.sh"
 
 shopt -s expand_aliases
