@@ -12,6 +12,8 @@ export VISUAL=nano
 export ANDROID_HOME=/opt/android-sdk
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/platform-tools
+export GDK_BACKEND=x11
+export DISPLAY=:0
 
 eval "$(starship init bash)"
 
