@@ -29,6 +29,8 @@ alias rcode="cd ~/Code/Lab\ 2/Root && root fit_grafico.cxx+"
 alias reboot="backup && systemctl reboot"
 alias backup="~/scripts/backup_bashrc.sh"
 alias fabric="python -m fabric"
+alias usb_mount="sudo mount /dev/sda1 /mnt/usb && cd /mnt/usb"
+alias usb_umount="cd $HOME && sudo umount /mnt/usb"
 
 shopt -s expand_aliases
 shopt -s histappend
