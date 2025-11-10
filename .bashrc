@@ -12,7 +12,6 @@ export VISUAL=nano
 export ANDROID_HOME=/opt/android-sdk
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/platform-tools
-export GDK_BACKEND=x11
 export DISPLAY=:0
 
 eval "$(starship init bash)"
@@ -29,6 +28,7 @@ alias btrfs-assistant="wsudo btrfs-assistant"
 alias rcode="cd ~/Code/Lab\ 2/Root && root fit_grafico.cxx+"
 alias reboot="backup && systemctl reboot"
 alias backup="~/scripts/backup_bashrc.sh"
+alias fabric="python -m fabric"
 
 shopt -s expand_aliases
 shopt -s histappend
