@@ -12,11 +12,12 @@
 	],
 
 	"modules-center": [
-		"cava",	],
+		"cava#left",
+		"hyprland/workspaces",
+	],
 
 	"modules-right": [
-		"hyprland/workspaces",
-		"hyprland/window",
+		"wlr/taskbar",
 		"custom/space",
 		"clock",
 		"custom/space",
@@ -218,21 +219,21 @@
 		"tooltip":false
 	},
 
-"cava": {
-        "bars": 34,                       
+"cava#left": {
+        "bars": 20,                       
         "framerate": 24,
         "autosens": 0,
         "sensitivity": 4,
         "lower_cutoff_freq": 50,
         "higher_cutoff_freq": 10000,
         "method": "pipewire",
-		"hide_on_silence":false,
+		"hide_on_silence":true,
 		"sleep_timer":1,
         "source": "auto",
         "stereo": true,
         "reverse": false,
-		"input_delay":1,
-		"noise_reduction":0.80,             
+		"input_delay":4,
+		"noise_reduction":0.85,             
         "bar_delimiter": 0,
         "format-icons": ["▂", "▃", "▄", "▅", "▆", "▇", "█" ],
     },
@@ -245,15 +246,6 @@
 		"format-paused": "",
 		"format-stopped":"",
 		"format-disconnected":""
-	},
-
-	"hyprland/window": {
-		"format":"| {initialTitle} |",
-		"icon":false,
-		"rewrite":{
-			"Spotify Free":"Spotify"
-		},
-		"format_empty":":)"
-}
+	}
 }
 

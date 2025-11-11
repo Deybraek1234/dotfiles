@@ -64,7 +64,7 @@ margin-right: 1px
 
 /*center*/
 #workspaces {
-padding: 2px 2px 0px 5px;
+padding: 0px 2px;
 }
 
 #workspaces button {
@@ -170,24 +170,10 @@ min-width:0px;
 
 #custom-music.playing {
 	color: @color4;
-	min-width:160px;
+	min-width:210px;
 }
 
 #custom-music.paused{
 	color: @color7;
-	min-width: 160px;
-}
-
-#custom-music.stopped{
-	background-color:transparent;
-	min-width: 80px;
-	border:none;
-}
-
-#window {
-    /*background-color: alpha(@color12, 0.15);*/
-	color:@color4;
-    border-radius: 0.5rem;
-    padding: 2px 5px;
-	transition: all 0.3s;
+	min-width: 210px;
 }
