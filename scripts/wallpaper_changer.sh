@@ -12,7 +12,7 @@ cp "$WALLPAPER_FILE" /tmp/picture.jgp &
 
 wal -i "$WALLPAPER_FILE" -n -q
 wal -i "$WALLPAPER_FILE" --s ~/.config/wal/templates/starship.toml.template -o ~/.config/starship.toml &
-swww img "$WALLPAPER_FILE" --transition-type wave --transition-fps 60 --transition-duration 1 &
-pywal-spicetify text
-~/scripts/mako.sh "$WALLPAPER_FILE"
-~/scripts/starship.sh
+~/scripts/mako.sh "$WALLPAPER_FILE" &
+~/scripts/starship.sh &
+~/scripts/spicetify.sh &
+swww img "$WALLPAPER_FILE" --transition-type wave --transition-fps 60 --transition-duration 1

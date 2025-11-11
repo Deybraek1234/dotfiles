@@ -232,9 +232,9 @@
         "stereo": true,
         "reverse": false,
 		"input_delay":1,
-		"noise_reduction":0.80,             
+		"noise_reduction":0.7,             
         "bar_delimiter": 0,
-        "format-icons": ["▂", "▃", "▄", "▅", "▆", "▇", "█" ],
+        "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
     },
 
 	"custom/music":{
