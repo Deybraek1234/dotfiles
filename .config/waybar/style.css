@@ -172,6 +172,7 @@ min-width:0px;
 #custom-music.stopped{
 	background-color:transparent;
 	min-width: 80px;
+	color: @color13;
 	border:none;
 }
 
