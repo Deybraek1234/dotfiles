@@ -31,6 +31,7 @@ alias backup="~/scripts/backup_bashrc.sh"
 alias fabric="python -m fabric"
 alias usb_mount="sudo mount /dev/sda1 /mnt/usb -o rw,uid=1000,gid=1000,umask=000 && cd /mnt/usb"
 alias usb_umount="cd $HOME && sudo umount /mnt/usb"
+alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 
 shopt -s expand_aliases
 shopt -s histappend

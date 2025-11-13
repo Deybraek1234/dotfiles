@@ -32,7 +32,6 @@ exec-once = swww-daemon
 exec-once = /usr/bin/kdeconnectd
 exec-once = [float;center;size 1040 600;noinitialfocus]kitty -e sh -c 'misfortune | cowsay > /tmp/cowsay.txt && fastfetch --logo /tmp/cowsay.txt |lolcat&& read'
 exec-once = [workspace 10 silent] spotify
-exec-once = iio-hyprland
 
 #############################
 ### ENVIRONMENT VARIABLES ###
@@ -213,7 +212,7 @@ bindl= ,switch:on:Lid Switch, exec, hyprlock --immediate
 bindl= ,switch:off:Lid Switch, exec, hyprlock --immediate
 bind = $mainMod, T, exec,[float;center;size 1040 600; noinitialfocus]kitty -e sh -c 'misfortune | cowsay > /tmp/cowsay.txt && fastfetch --logo /tmp/cowsay.txt|lolcat && read'
 bind = $mainMod SHIFT, J, togglefloating
-bind = $mainMod, O, exec, obsidian
+bind = $mainMod, O, exec, [workspace 1] obsidian
 
 # Move focus with mainMod + arrow keys
 bind = $mainMod, left, movefocus, l
