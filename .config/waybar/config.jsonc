@@ -213,8 +213,7 @@
 
 	"idle_inhibitor":{
 		"format":"<big>  </big>",
-		"on-click-right":"rofi -show powermenu -modi powermenu:~/.local/bin/rofi-powermenu -config ~/.config/rofi/presets/powermenu.rasi",
-		"timeout":60.0,
+		"timeout":120.0,
 		"tooltip":false
 	},
 

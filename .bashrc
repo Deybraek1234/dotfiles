@@ -41,3 +41,5 @@ shopt -s autocd
 
 HISTFILESIZE=1000
 HISTFILESIZE=2000
+
+eval "$(thefuck --alias)"
