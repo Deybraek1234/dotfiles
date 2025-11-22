@@ -12,5 +12,5 @@ wal -i "$l" -n -q &
 wal -i "$l" -n -t ~/.config/wal/templates/starship.toml.template -o ~/.config/starship.toml &
 ~/scripts/mako.sh "$l" &
 ~/scripts/starship.sh &
-~/scripts/spicetify.sh &
+#~/scripts/spicetify.sh &
 swww img "$l" --transition-type "wave" --transition-fps 60 --transition-duration 1

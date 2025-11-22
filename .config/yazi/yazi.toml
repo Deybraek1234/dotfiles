@@ -25,7 +25,7 @@ image_quality = 75
 
 [opener]
 wp = [{ run = '/home/franci/scripts/wallpaper_changer.sh "$@"', desc = "Change wallpaper", for = "linux"}]
-edit = [{run = 'nano "$@"', desc = "Nano", block = true, for = "unix"}]
+edit = [{run = 'nvim "$@"', desc = "Neovim", block = true, for = "unix"}]
 extract = [{run = 'unzip $@"', desc = "Extract here", for = "unix"}]
 play = [{run = 'mpv --force-window "$@"', orphan = true, for = "unix"}]
 code = [{run = 'code "$@"', block = false, desc = "Open VS code", for ="unix"}]
