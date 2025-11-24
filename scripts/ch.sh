@@ -1,7 +1,7 @@
 #!/bin/bash
 
 dir="${HOME}/Pictures/wallpapers"
-l="$(find "$dir" -name '*.jpg' -o -name '*.png' | shuf -n1)"
+l="$(find "$dir" -maxdepth 1 -type f | shuf -n1)"
 
 if [ -z "$l" ]; then
 	exit1
