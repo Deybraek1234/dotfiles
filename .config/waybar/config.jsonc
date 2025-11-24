@@ -24,7 +24,7 @@
 		"pulseaudio/slider",
 		"custom/space",
 		"custom/music",
-		"custom/swaync"
+		"hyprland/submap"
 	],
 
 	"hyprland/workspaces": {
@@ -67,6 +67,14 @@
 	},
 
 
+	"hyprland/submap":{
+		"format": "  ",	
+		"always-on":true,	
+		"tooltip": "Notification Center",
+		"on-click":"$HOME/scripts/mako_history.sh",
+		"interval" : 3600
+	},
+
 	"custom/poweroff": {
 		"format": "",
     		"tooltip": "Power Off",
@@ -89,12 +97,6 @@
   		"interval": 3600
 },
 
-	"custom/swaync": {
-		"format": "",
-    		"tooltip": "notification center",
-		"on-click": "~/scripts/mako_history.sh",
-  		"interval": 3600
-},
 	"network#net2": {
 		"interval": 2,
 		"format": "<span></span>{bandwidthUpBytes:>}  <span></span>{bandwidthDownBytes:>}"

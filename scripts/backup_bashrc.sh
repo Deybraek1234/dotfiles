@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Array of directories to backup
-DIRECTORIES=("$HOME/stow/dotfiles" "$HOME/stow/laboratori/Code" "$HOME/stow/Obsidian/Chimica")
+DIRECTORIES=("$HOME/stow/dotfiles" "$HOME/stow/laboratori/Code" "$HOME/stow/Obsidian/Chimica" "$HOME/stow/Lab2/Code/Latex-projects")
 COMMIT_MESSAGE="Automated backup: $(date '+%Y-%m-%d %H:%M:%S')"
 BRANCH="master" # Change to 'main' if needed
 

@@ -182,3 +182,11 @@ min-width:0px;
     padding: 2px 5px;
 	transition: all 0.3s;
 }
+
+#submap{
+	color:@color4;
+}
+
+#submap.f-binds {
+	color:@color13;
+}
