@@ -12,12 +12,11 @@
 	],
 
 	"modules-center": [
-		"cava#left",
-		"hyprland/workspaces",
-	],
+		"cava",	],
 
 	"modules-right": [
-		"wlr/taskbar",
+		"hyprland/workspaces",
+		"hyprland/window",
 		"custom/space",
 		"clock",
 		"custom/space",
@@ -25,7 +24,7 @@
 		"pulseaudio/slider",
 		"custom/space",
 		"custom/music",
-		"custom/swaync"
+		"hyprland/submap"
 	],
 
 	"hyprland/workspaces": {
@@ -68,6 +67,14 @@
 	},
 
 
+	"hyprland/submap":{
+		"format": "  ",	
+		"always-on":true,	
+		"tooltip": "Notification Center",
+		"on-click":"$HOME/scripts/mako_history.sh",
+		"interval" : 3600
+	},
+
 	"custom/poweroff": {
 		"format": "",
     		"tooltip": "Power Off",
@@ -90,12 +97,6 @@
   		"interval": 3600
 },
 
-	"custom/swaync": {
-		"format": "",
-    		"tooltip": "notification center",
-		"on-click": "~/scripts/mako_history.sh",
-  		"interval": 3600
-},
 	"network#net2": {
 		"interval": 2,
 		"format": "<span></span>{bandwidthUpBytes:>}  <span></span>{bandwidthDownBytes:>}"
@@ -214,28 +215,27 @@
 
 	"idle_inhibitor":{
 		"format":"<big>  </big>",
-		"on-click-right":"rofi -show powermenu -modi powermenu:~/.local/bin/rofi-powermenu -config ~/.config/rofi/presets/powermenu.rasi",
-		"timeout":60.0,
+		"timeout":120.0,
 		"tooltip":false
 	},
 
-"cava#left": {
-        "bars": 20,                       
+"cava": {
+        "bars": 34,                       
         "framerate": 24,
         "autosens": 0,
         "sensitivity": 4,
         "lower_cutoff_freq": 50,
         "higher_cutoff_freq": 10000,
         "method": "pipewire",
-		"hide_on_silence":true,
+		"hide_on_silence":false,
 		"sleep_timer":1,
         "source": "auto",
         "stereo": true,
         "reverse": false,
-		"input_delay":4,
-		"noise_reduction":0.85,             
+		"input_delay":1,
+		"noise_reduction":0.7,             
         "bar_delimiter": 0,
-        "format-icons": ["▂", "▃", "▄", "▅", "▆", "▇", "█" ],
+        "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
     },
 
 	"custom/music":{
@@ -246,6 +246,14 @@
 		"format-paused": "",
 		"format-stopped":"",
 		"format-disconnected":""
-	}
-}
+	},
 
+	"hyprland/window": {
+		"format":"| {initialTitle} |",
+		"icon":false,
+		"rewrite":{
+			"Spotify Free":"Spotify"
+		},
+		"format_empty":":)"
+}
+}

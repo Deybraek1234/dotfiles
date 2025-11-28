@@ -81,7 +81,7 @@ unbind_proc = true # run cmd in a forked shell as opposed to as a child process 
 [[modules]]
 description = "App launcher (fsel)"
 prefix = "app"
-cmd = "hyprctl dispatch resizeactive 300 300; fsel"
+cmd = "hyprctl dispatch resizeactive 300 300; fsel -d --uwsm"
 move_overlay_down = 1
 with_argument = false
 url_encode = false

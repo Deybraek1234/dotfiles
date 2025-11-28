@@ -3,7 +3,6 @@
 
 # Highlight color for selected items and cursor
 highlight_color = "LightBlue"
-
 # Keybinds (optional - uncomment to customize)
 # See keybinds.toml for examples
 # [keybinds]
@@ -54,14 +53,13 @@ header_title_color = "LightBlue"
 # ===== LAYOUT =====
 
 # Top panel height as percentage (10-70%)
-title_panel_height_percent = 10
+title_panel_height_percent = 30
 
 # Input panel height in lines (1-10)
 input_panel_height = 3
 
 # Title panel position: "top", "middle", or "bottom"
 title_panel_position = "top"
-
 # ===== SECTIONS =====
 # All sections must be at the bottom of the file!
 
@@ -69,22 +67,18 @@ title_panel_position = "top"
 # These settings MUST be in the [app_launcher] section
 # WARNING: DO NOT put color/UI options here - they belong at the root level!
 [app_launcher]
-
 # Filter apps based on OnlyShowIn/NotShowIn and $XDG_CURRENT_DESKTOP
 # Hides apps not meant for your desktop environment
 filter_desktop = true
-
 # Include raw executables from $PATH (ls, grep, etc.)
 list_executables_in_path = false
-
 # Hide app list until you start typing
-hide_before_typing = false
+hide_before_typing = false 
 
 # Match mode: "fuzzy" or "exact"
 # fuzzy = fzf-style matching (fire matches Firefox)
 # exact = only exact/starts-with/contains matches
-match_mode = "fuzzy"
-
+match_mode = "exact"
 # Confirm before launching with -p if app has never been launched before
 # Helps prevent accidental launches of wrong apps
 confirm_first_launch = false

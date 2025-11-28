@@ -12,11 +12,10 @@
 	],
 
 	"modules-center": [
-		"cava",	],
+		"hyprland/window",	],
 
 	"modules-right": [
 		"hyprland/workspaces",
-		"hyprland/window",
 		"custom/space",
 		"clock",
 		"custom/space",
@@ -66,7 +65,6 @@
 		]
 	},
 
-
 	"hyprland/submap":{
 		"format": "  ",	
 		"always-on":true,	
@@ -75,35 +73,9 @@
 		"interval" : 3600
 	},
 
-	"custom/poweroff": {
-		"format": "",
-    		"tooltip": "Power Off",
-		"on-click": "systemctl poweroff",
-  		"interval": 3600
-},
-
-
-	"custom/reboot": {
-		"format": "",
-    		"tooltip": "reboot",
-		"on-click": "reboot",
-  		"interval": 3600
-},
-
-	"custom/sleep": {
-		"format": "󰤄",
-    		"tooltip": "sleep",
-		"on-click": "systemctl suspend",
-  		"interval": 3600
-},
-
 	"network#net2": {
 		"interval": 2,
 		"format": "<span></span>{bandwidthUpBytes:>}  <span></span>{bandwidthDownBytes:>}"
-	},
-
-	"custom/void": {
-		"format": "<span>  󰇙 </span>"
 	},
 
 	"custom/space": {
@@ -192,6 +164,7 @@
 		"on-click": "rfkill toggle bluetooth",
   		"on-click-right": "blueman-manager"
 	},
+
 	"battery":{
 		"interval":5,
 		"states":{
@@ -202,50 +175,11 @@
 		"format":"{icon}   {capacity}%",
 		"format-charging":"󰂄 {capacity}%",
 	},
-	"group/op":{
-		"orientation":"inherit",
-		"class":"group-op",
-		"modules":[
-			"custom/lock",
-			"custom/sleep",
-			"custom/reboot",
-			"custom/poweroff"
-		]
-	},
 
 	"idle_inhibitor":{
 		"format":"<big>  </big>",
 		"timeout":120.0,
 		"tooltip":false
-	},
-
-"cava": {
-        "bars": 34,                       
-        "framerate": 24,
-        "autosens": 0,
-        "sensitivity": 4,
-        "lower_cutoff_freq": 50,
-        "higher_cutoff_freq": 10000,
-        "method": "pipewire",
-		"hide_on_silence":false,
-		"sleep_timer":1,
-        "source": "auto",
-        "stereo": true,
-        "reverse": false,
-		"input_delay":1,
-		"noise_reduction":0.7,             
-        "bar_delimiter": 0,
-        "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
-    },
-
-	"custom/music":{
-		"format":"{}",
-		"return-type": "json",
-		"exec": "waybar-module-music --marquee --title-width 15 --effect-speed 150 --play-icon  --pause-icon ",
-
-		"format-paused": "",
-		"format-stopped":"",
-		"format-disconnected":""
 	},
 
 	"hyprland/window": {

@@ -12,7 +12,7 @@ export VISUAL=nvim
 export ANDROID_HOME=/opt/android-sdk
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/platform-tools
-
+export PATH=$PATH:scripts
 eval "$(starship init bash)"
 
 alias config="$EDITOR ~/.config/hypr/hyprland.conf"
@@ -24,13 +24,15 @@ alias bye="exit"
 alias chs="navi"
 alias btrfs-assistant="wsudo btrfs-assistant"
 alias rcode="cd ~/Code/Lab\ 2/Root && root fit_grafico.cxx+"
-alias reboot="backup && read -p && systemctl reboot"
-alias backup="~/scripts/backup_bashrc.sh && read -p 'Press anything'"
+alias gpush="~/scripts/backup_git.sh && read -p 'Press anything to exit'"
+alias reboot="gpush&& read -p && systemctl reboot"
+alias gpull="~/scripts/restore_git.sh && read -p 'Press anything to exit'"
 alias fabric="python -m fabric"
 alias usb_mount="sudo mount /dev/sda1 /mnt/usb -o rw,uid=1000,gid=1000,umask=000 && cd /mnt/usb"
 alias usb_umount="cd $HOME && sudo umount /mnt/usb"
 alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 alias nv="nvim"
+alias sleep="systemctl sleep & bye"
 
 shopt -s expand_aliases
 shopt -s histappend
