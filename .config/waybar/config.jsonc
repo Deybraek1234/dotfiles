@@ -22,7 +22,6 @@
 		"pulseaudio#sink",
 		"pulseaudio/slider",
 		"custom/space",
-		"custom/music",
 		"hyprland/submap"
 	],
 
@@ -43,9 +42,10 @@
       },	
 
 	"clock": {
-	"format": "<big>{:%H:%M}</big>",
-        "interval": 60
-        }, 
+	"format": "{:%a, %b %d %H:%M}",
+    "interval": 60,
+    "tooltip": false
+  }, 
 
 	"network": {
 		"interval": 2.5,
@@ -183,12 +183,12 @@
 	},
 
 	"hyprland/window": {
-		"format":"| {initialTitle} |",
+		"format":"  {}  ",
 		"icon":false,
 		"rewrite":{
 			"Spotify Free":"Spotify"
 		},
-		"format_empty":":)"
+		"format-empty":":)"
 }
 }
 
