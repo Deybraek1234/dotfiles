@@ -145,3 +145,9 @@ description = "network manager"
 prefix = "nm"
 cmd = "hyprctl dispatch resizeactive 50 300; sleep 0.1; nmtui"
 unbind_proc = true
+
+[[modules]]
+description = "random arch page"
+prefix = "raw"
+cmd = "firefox https://wiki.archlinux.org/title/Special:Random"
+unbind_proc = true
