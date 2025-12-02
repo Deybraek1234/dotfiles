@@ -1,25 +1,3 @@
-
-
-#   ██████╗ ████████╗████████╗███████╗██████╗                         
-#  ██╔═══██╗╚══██╔══╝╚══██╔══╝██╔════╝██╔══██╗                        
-#  ██║   ██║   ██║      ██║   █████╗  ██████╔╝█████╗                  
-#  ██║   ██║   ██║      ██║   ██╔══╝  ██╔══██╗╚════╝                  
-#  ╚██████╔╝   ██║      ██║   ███████╗██║  ██║                        
-#   ╚═════╝    ╚═╝      ╚═╝   ╚══════╝╚═╝  ╚═╝                        
-#  ██╗      █████╗ ██╗   ██╗███╗   ██╗ ██████╗██╗  ██╗███████╗██████╗ 
-#  ██║     ██╔══██╗██║   ██║████╗  ██║██╔════╝██║  ██║██╔════╝██╔══██╗
-#  ██║     ███████║██║   ██║██╔██╗ ██║██║     ███████║█████╗  ██████╔╝
-#  ██║     ██╔══██║██║   ██║██║╚██╗██║██║     ██╔══██║██╔══╝  ██╔══██╗
-#  ███████╗██║  ██║╚██████╔╝██║ ╚████║╚██████╗██║  ██║███████╗██║  ██║
-#  ╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝ ╚═════╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
-
-# Terminal shell script launcher, written in rust
-# Source Code: https://github.com/kuokuo123/otter-launcher
-
-# Recommended to be used in companion with sway-launcher-desktop to launch desktop applications
-# https://github.com/Biont/sway-launcher-desktop
-
-
 [general]
 default_module = "gg" # module to run when no prefix is matched
 empty_module = "app" # run with an empty prompt
@@ -40,12 +18,12 @@ delay_startup = 0 # sometimes the otter runs too fast even before the terminal w
 [interface]
 # customized header & list prefix
 header = """
-    ┌ \u001B[1;34m  $USER@$(echo $HOSTNAME) \u001B[0m───┐
-    │ \u001B[90m󱎘  \u001B[31m󱎘  \u001B[32m󱎘  \u001B[33m󱎘  \u001B[34m󱎘  \u001B[35m󱎘  \u001B[36m󱎘\u001B[0m      │
-    └ \u001B[36m \u001B[1;36m system\u001B[0m archlinux      ┘
-    ┌ \u001B[33m \u001B[1;36m window \u001B[0m     $XDG_CURRENT_DESKTOP  ┐
-    │ \u001B[31m \u001B[1;36m loads\u001B[0m       $(cat /proc/loadavg | cut -d ' ' -f 1)      │
-    │ \u001B[32m \u001B[1;36m memory\u001B[0m     $(free -h | awk 'FNR == 2 {print $3}')      │
+    ┌ \u001B[1;34m  $USER@$(echo $HOSTNAME) \u001B[0m┐
+    │ \u001B[90m󱎘  \u001B[31m󱎘  \u001B[32m󱎘  \u001B[33m󱎘  \u001B[34m󱎘  \u001B[35m󱎘  \u001B[36m󱎘\u001B[0m   │
+    └ \u001B[36m \u001B[1;36m system\u001B[0m  archlinux  ┘
+    ┌ \u001B[33m \u001B[1;36m window \u001B[0m $XDG_CURRENT_DESKTOP   ┐
+    │ \u001B[31m \u001B[1;36m loads\u001B[0m   $(cat /proc/loadavg | cut -d ' ' -f 1)       │
+    │ \u001B[32m \u001B[1;36m memory\u001B[0m  $(free -h | awk 'FNR == 2 {print $3}')      │
     │ \u001B[90m\u001B[0m  """
 list_prefix = "    └ \u001B[34m󱓞  "
 selection_prefix = "    └ \u001B[31m󱓞  "

@@ -5,3 +5,4 @@ vim.opt.cursorline = true
 vim.opt.backspace = '2'
 vim.opt.showcmd = true
 vim.opt.autoread = true
+vim.opt.number = true
