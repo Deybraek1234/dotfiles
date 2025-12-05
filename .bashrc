@@ -1,10 +1,10 @@
+if [ $(tty) == "/dev/tty1" ]; then
+    hyprland
+fi
+
 if [ -f "$HOME/.cache/wal/color_starship.sh" ]; then
     . "$HOME/.cache/wal/color_starship.sh"
 fi
-
-if [[ $(tty) == "/dev/tty1" ]]; then
-       Hyprland
-fi 
 
 export PATH="~/scripts:$PATH"
 export EDITOR=nvim
@@ -13,6 +13,7 @@ export ANDROID_HOME=/opt/android-sdk
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:scripts
+export MANPAGER='nvim +Man!'
 eval "$(starship init bash)"
 
 alias config="$EDITOR ~/.config/hypr/hyprland.conf"
